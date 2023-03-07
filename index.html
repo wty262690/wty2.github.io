@@ -3,14 +3,37 @@
 	<head >
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>VIDEO TEST</title>
-
-    </head>
+		<title>VIDEO TEST</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.2.4/video.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.2.4/video-js.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			var video
+			window.onload=function(){
+				video = document.getElementById("HTMLvideo");
+				$("#HTMLvido")[0].pause();
+			}
+			
+			function videoplay (){
+				console.log("videoplay");
+			}
+			function next (){
+				console.log("end");
+				video.play();
+			}
+		</script>
+	</head>
+	
     <body>
-        <video width="320" height="240" controls>
-            <source src="./vidoe/rapidsave.com_isnt_in_the_circle_yet-rfmsgn4r9mka1 (2).mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-        </video>
-    </body>
+  	<!--<iframe src="https://drive.google.com/file/d/1hel_41hmdKyg0rjUGqc8F0PkUaBFQsZ-/preview" width="auto" height="auto" allow="autoplay loop"></iframe>-->
+	
+	
+	<video onplay="videoplay()" onended = "next()"autoplay name="media">
+        <source class="HTMLvideo" id="HTMLvideo" src="./video/test1.MP4" type="video/mp4">
+	</video>
+	
+	<!--<iframe src="https://www.youtube.com/embed/C5wUdScmIhk?autoplay=1&mute=1" width = "100%" height="auto" frameborder = "0" allowfullscreem></iframe>
+	<video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" style="width: 738px; height: 150px; left: 0px; top: -150px;" src="blob:https://www.youtube.com/b834430e-15bd-4bd2-8fe7-d32e05818734"></video>
+	-->
+	</body>
 </html>
